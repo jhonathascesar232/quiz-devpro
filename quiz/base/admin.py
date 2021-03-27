@@ -5,4 +5,4 @@ from .models import Pergunta
 # Register your models here.
 @admin.register(Pergunta)
 class PergundaAdmin(admin.ModelAdmin):
-	display_field = '__all__'
+	list_display = ('id', 'enunciado', 'disponivel')
