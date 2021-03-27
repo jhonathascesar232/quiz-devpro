@@ -11,4 +11,7 @@ class Pergunta(models.Model):
 	enunciado = models.TextField()
 	disponivel = models.BooleanField(default = False)
 	alternativas = models.JSONField()
-	alternativa_correta = models.IntegerField(ALTERNATIVAS)
+	alternativa_correta = models.IntegerField(choices = ALTERNATIVAS)
+
+	def __str__(self):
+		return self.enunciado
